@@ -6,5 +6,5 @@ const router = require("./routes/router");
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use('/', router);
-module.exports = app;
+exports.default = app;
 //# sourceMappingURL=app.js.map

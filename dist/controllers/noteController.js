@@ -9,8 +9,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.showStats = exports.deleteAllInTable = exports.setAllArchiveStatus = exports.setSingleArchiveStatus = exports.edit = exports.create = exports.deleteSingle = exports.showSingle = exports.showAll = void 0;
+exports.showStats = exports.deleteAllInTable = exports.setAllArchiveStatus = exports.setSingleArchiveStatus = exports.edit = exports.create = exports.deleteSingle = exports.showSingle = exports.showAll = exports.showHomeMessage = void 0;
 const noteService = require("../services/noteService");
+let showHomeMessage = function (req, res) {
+    res.append('Content-Type', 'application/json');
+    res.status(200).send(JSON.stringify({ message: "hello from note manager app" }));
+};
+exports.showHomeMessage = showHomeMessage;
 let showAll = function (req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         res.append('Content-Type', 'application/json');
