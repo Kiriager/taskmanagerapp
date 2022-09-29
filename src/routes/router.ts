@@ -3,14 +3,7 @@ const router = express.Router()
 
 import noteController = require('../controllers/noteController')
 
-router.get('/', (req, res) => {
-  res.json({message: 'hello'})
-})
-
-// router.post('/notes', (req, res) => {
-//   res.json({message: res})
-// })
-
+router.get('/', noteController.showHomeMessage)
 router.post('/notes', noteController.create)
 
 router.get('/notes', noteController.showAll)

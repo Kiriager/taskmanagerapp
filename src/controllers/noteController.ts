@@ -1,6 +1,11 @@
 import express = require('express')
 import noteService = require('../services/noteService')
 
+export let showHomeMessage = function(req: express.Request, res:express.Response) {
+  res.append('Content-Type', 'application/json')
+  res.status(200).send(JSON.stringify({message: "hello from note manager app"}))
+}
+
 export let showAll = async function(req: express.Request, res:express.Response) {
   res.append('Content-Type', 'application/json')
   try {
