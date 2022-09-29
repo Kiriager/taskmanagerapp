@@ -1,8 +1,9 @@
 import dotenv = require('dotenv')
 dotenv.config()
 
+import app from './app'
+
 function start() {
-  const app = require('./App')
   app.listen(process.env.PORT)
 }
 

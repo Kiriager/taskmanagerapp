@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx tsc --project ./",
-    "start": "node ./dist/launch",
-    "watch": "nodemon ./dist/launch"
+    "start": "node ./dist/launch"
+
   },
   "keywords": [],
   "author": "",
